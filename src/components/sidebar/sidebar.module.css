@@ -1,0 +1,29 @@
+.navbar{
+    grid-area: n;
+    background-color: #252733;
+}
+
+.item {
+    text-decoration: none;
+    color: white;
+    display: block;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+}
+.item:active {
+
+}
+
+.item p{
+    border: 1px solid ;
+    border-radius: 9px;
+    padding: 10px;
+    margin-right: 5px;
+}
+
+
+.item:hover {
+    color: #e16640;
+    transition-duration: 0.2s;
+}
