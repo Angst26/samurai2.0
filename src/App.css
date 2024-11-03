@@ -6,16 +6,19 @@
     font-size: 22px;
 }
 
-.App {
+.container {
     display: grid;
+    grid-template-columns: 0.4fr 1.6fr 1fr;
+    grid-template-rows: 0.4fr 1.6fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
     grid-template-areas:
-            "h h"
-            "n c";
-    grid-template-rows: 60px 1fr;
-    grid-template-columns: 2fr 10fr;
+    "Header Header Header"
+    "Navbar Content Content"
+    "Navbar Content Content";
 }
 
-.content{
-    grid-area: c;
-}
+
+.content { grid-area: Content; }
+
 

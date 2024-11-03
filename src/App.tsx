@@ -2,19 +2,19 @@ import './App.css'
 import {Header} from "./components/header/header.tsx";
 import {Sidebar} from "./components/sidebar/sidebar.tsx";
 import {Route, Routes} from "react-router-dom";
-import {Profile} from "./components/profile/profile.tsx";
+import {ProfileContainer} from "./components/profile/profileContainer.tsx";
 
 
 
 function App() {
 
     return (
-        <div className="App">
+        <div className="container">
         <Header/>
         <Sidebar/>
         <div className='content'>
             <Routes>
-                <Route path="/profile" element={<Profile/>}/>
+                <Route path="/profile" element={<ProfileContainer/>}/>
             </Routes>
         </div>
     </div>

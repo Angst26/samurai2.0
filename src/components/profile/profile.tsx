@@ -1,16 +1,33 @@
 import styles from './profile.module.css';
+import {IProfile} from "../../store/slice/profileSlice.ts";
 
-export const  Profile = () => {
+interface IProps  {
+    profile: IProfile;
+}
+
+export const Profile: React.FC<IProps> = ({profile}: IProps) => {
+    const {
+        aboutMe,
+        contacts,
+        lookingForAJobDescription,
+        lookingForAJob,
+        fullName
+    } = profile;
+
     return (<div className={styles.profile}>
         <img src="#" alt="profile-photo"/>
         <p>
-            описание
+            {fullName}
         </p>
         <p>
-            статус:
+            o cебе: {aboutMe}
+
         </p>
         <p>
-            o cебе:
+            Ищу работу: {lookingForAJob?"Да": 'Нет'}
+        </p>
+        <p>
+            {lookingForAJobDescription}
         </p>
 
     </div>);

@@ -2,7 +2,7 @@ import './header.module.css'
 
 export const Header = () => {
     return(
-        <header>
+        <header className="header">
             <img src="#" alt="avatar"/>
         </header>
     )
