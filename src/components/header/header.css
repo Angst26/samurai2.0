@@ -1,0 +1,27 @@
+.header{
+    background-color: var(--additional-color);
+    padding: 2px 5px ;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.mobile-menu-button{
+    height: 2rem;
+    width: 2rem;
+    background-color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    display: block;
+}
+
+@media screen and (min-width: 800px) {
+    .mobile-menu-button{
+        display: none;
+    }
+}
+
+
