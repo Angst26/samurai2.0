@@ -1,24 +1,32 @@
-* {
-    font-family: Bahnschrift, Helvetica, sans-serif;
-    font-style: italic;
-    margin: 0;
-    padding: 0;
-    font-size: 22px;
+
+
+.theme-white{
+    --font-color: #252733;
+    --background-color: #ffffff;
+    --additional-color: #dc007d;
+}
+.theme-dark{
+    --font-color: #fff;
+    --background-color: #252733;
+    --additional-color: rgba(230, 108, 6, 0.99);
+}
+
+main{
+    background-color: var(--background-color);
 }
 
 .container {
-    display: grid;
-    grid-template-columns: 0.4fr 1.6fr 1fr;
-    grid-template-rows: 0.4fr 1.6fr 1fr;
-    gap: 0px 0px;
-    grid-auto-flow: row;
-    grid-template-areas:
-    "Header Header Header"
-    "Navbar Content Content"
-    "Navbar Content Content";
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+.wrapper{
+    min-height: 100vh;
+    background-color: var(--background-color);
+    color: var(--font-color);
 }
 
 
-.content { grid-area: Content; }
+
 
 
