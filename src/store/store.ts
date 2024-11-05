@@ -3,7 +3,7 @@ import profileReducer from './slice/profileSlice.ts'
 
 export const store = configureStore({
     reducer: {
-        profilePage: profileReducer
+        profilePage: profileReducer,
     }
 })
 

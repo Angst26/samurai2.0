@@ -1,14 +1,17 @@
 import './header.css'
 import {useState} from "react";
+import {MobileNavbar} from "../navbar/mobile/MobileNavbar.tsx";
 
 export const Header = () => {
-    const [isLogged, setIsLogged] = useState(true);
-    const [menuOpen, setMenuOpen] = useState(true);
+    const [isLogged, setIsLogged] = useState<boolean>(false);
+    const [menuOpen, setMenuOpen] = useState<boolean>(false);
 
-    let openClass = '';
+
+    let openStyleButton = '', openMenu = '';
 
     if (menuOpen) {
-        openClass = 'open'
+        openStyleButton = 'open'
+        openMenu = 'opened'
     };
 
     const menuButtonHandler = () => {
@@ -17,8 +20,9 @@ export const Header = () => {
 
     return(
         <header className="header">
+            <MobileNavbar openMenu={openMenu}/>
             <div className='container header-container'>
-                <button className={`mobile-menu-button ${openClass}`} onClick={menuButtonHandler}></button>
+                <button className={`mobile-menu-button ${openStyleButton}`} onClick={menuButtonHandler}></button>
                 <img src="" height='50px' width='50px' alt="avatar"/>
 
                 {/*{!isLogged && <button>Войти</button>}*/}

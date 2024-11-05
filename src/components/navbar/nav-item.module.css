@@ -1,0 +1,8 @@
+.item{
+    text-decoration: none;
+    color: var(--font-color);
+    font-weight: 640;
+    font-size: 1.6rem;
+    display: block;
+    border-bottom: 0.1rem solid var(--font-color);
+}

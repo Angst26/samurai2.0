@@ -12,7 +12,6 @@ export interface IProfile {
 
 export interface IProfileState {
     profile: IProfile;
-
 }
 
 const initialState: IProfileState = {

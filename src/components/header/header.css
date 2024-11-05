@@ -10,6 +10,7 @@
 }
 
 .mobile-menu-button{
+    --delay: 0.3s;
     position: relative;
     height: 0.2rem;
     width: 2rem;
@@ -18,7 +19,8 @@
     border: none;
     cursor: pointer;
     display: block;
-    transition: 0.3s;
+    transition: var(--delay);
+    z-index: 10;
 }
 
 .mobile-menu-button::after,
@@ -31,30 +33,32 @@
     width: 2rem;
     background-color: var(--font-color);
     border-radius: 10px;
-    transition: 0.3s;
+    transition: var(--delay);
 }
 
 .mobile-menu-button::after {
-    top: -10px; 
+    top: -10px;
 }
 
 .mobile-menu-button::before {
     bottom: -10px;
 }
 
-.open {
+.button-opened {
     background-color: transparent;
 }
 
-.open::after {
+.button-opened::after {
     top: 0px;
     transform: rotate(45deg);
 }
 
-.open::before {
+.button-opened::before {
     bottom: 0px;
     transform: rotate(-45deg);
 }
+
+
 
 @media screen and (min-width: 800px) {
     .mobile-menu-button{
