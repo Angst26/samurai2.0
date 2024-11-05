@@ -10,12 +10,50 @@
 }
 
 .mobile-menu-button{
-    height: 2rem;
+    position: relative;
+    height: 0.2rem;
     width: 2rem;
-    background-color: white;
+    background-color: var(--font-color);
     border-radius: 10px;
+    border: none;
     cursor: pointer;
     display: block;
+    transition: 0.3s;
+}
+
+.mobile-menu-button::after,
+.mobile-menu-button::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    display: block;
+    height: 0.2rem;
+    width: 2rem;
+    background-color: var(--font-color);
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.mobile-menu-button::after {
+    top: -10px; 
+}
+
+.mobile-menu-button::before {
+    bottom: -10px;
+}
+
+.open {
+    background-color: transparent;
+}
+
+.open::after {
+    top: 0px;
+    transform: rotate(45deg);
+}
+
+.open::before {
+    bottom: 0px;
+    transform: rotate(-45deg);
 }
 
 @media screen and (min-width: 800px) {
